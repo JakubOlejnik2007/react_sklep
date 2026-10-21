@@ -53,6 +53,10 @@ function App() {
         </select>
       </div>
 
+      <button onClick={() => {
+        setKategoria("wszystkie"); setSortowanie("domyslne"); setSzukaj("");
+      }}>Wyczyść filtry</button>
+
 
       <ProductList produkty={produkty} />
     </div>
