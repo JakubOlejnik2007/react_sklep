@@ -48,6 +48,8 @@ function App() {
           <option value={"domyslne"}>Domyślne</option>
           <option value={"rosnaco"}>Rosnąco</option>
           <option value={"malejaco"}>Malejąco</option>
+          <option value={"A-Z"}>A-Z</option>
+          <option value={"Z-A"}>Z-A</option>
         </select>
       </div>
 
@@ -60,10 +62,10 @@ function App() {
 export default App
 
 
-// kilka komponentów 
+// kilka komponentów
 
 // index.html strona główna
-// indexCon.html 
+// indexCon.html
 
 // header -> jakaś treść zależna od podstrony -> footer
 
