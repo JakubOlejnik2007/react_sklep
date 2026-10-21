@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { filtrujProdukty, sortujProdukty, wyszukajProdukty } from './controllers/productController'
 import ProductList from './views/productList'
 import './App.css'
-
+import './styles/productList.css'
 function App() {
   const [kategoria, setKategoria] = useState("wszystkie");
   const [szukaj, setSzukaj] = useState("");

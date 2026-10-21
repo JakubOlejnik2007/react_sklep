@@ -1,0 +1,139 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding: 18px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e6ece7;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgb(24 54 38 / 4%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgb(24 54 38 / 10%);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 16px;
+    padding: 10px;
+    object-fit: contain;
+    background: #f7f9f7;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+.product-card h2 {
+    margin: 0 0 10px;
+    color: #213a2d;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.product-card p {
+    color: #718078;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.product-card .price {
+    margin-top: auto;
+    color: #167653;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.product-card button:not(.heart-button) {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    color: #fff;
+    background: #167653;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.product-card button:not(.heart-button):hover {
+    background: #105c40;
+    transform: translateY(-1px);
+}
+
+.product-card button:disabled {
+    color: #e7eae8;
+    background: #a3ada7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.product-card .heart-button {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    z-index: 1;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    padding: 0;
+    color: #a1aaa4;
+    background: #fff;
+    border: 1px solid #e7ece8;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.product-card .heart-button:hover {
+    color: #dc4760;
+    background: #fff0f2;
+    transform: scale(1.08);
+}
+
+@media (max-width: 520px) {
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .product-card img {
+        height: 130px;
+    }
+
+    .product-card h2 {
+        font-size: 14px;
+    }
+
+    .product-card .price {
+        font-size: 18px;
+    }
+}
